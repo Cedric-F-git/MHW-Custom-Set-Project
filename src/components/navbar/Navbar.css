@@ -1,0 +1,12 @@
+.ul-nav {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 100%;
+  background-color: rgb(126, 67, 16);
+  padding-left: 30px;
+}
+
+.li-nav {
+  margin: 20px;
+}
