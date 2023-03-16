@@ -7,6 +7,13 @@
   list-style: none;
 }
 
+:root {
+  --background-color: #414040;
+  --second-color: #5b5451;
+  --color-title: #baaca6;
+  --color: #eddbd3;
+}
+
 body {
-  background-color: bisque;
+  background-color: var(--background-color);
 }
