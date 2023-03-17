@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Compendium = () => {
+const CustomSet = () => {
   return <div></div>;
 };
 
-export default Compendium;
+export default CustomSet;

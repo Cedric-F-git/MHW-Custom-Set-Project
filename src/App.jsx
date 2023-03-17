@@ -1,14 +1,23 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import './App.css';
 import Home from './pages/Home';
+import CustomSet from './pages/CustomSet';
+import Compendium from './pages/Compendium';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
     <div className='App'>
       <Navbar />
-      <Home />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='CustomSet' element={<CustomSet />} />
+        <Route path='Compendium' element={<Compendium />} />
+        <Route path='*' element={<NotFound />} />
+      </Routes>
       <Footer />
     </div>
   );
