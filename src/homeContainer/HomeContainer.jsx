@@ -22,8 +22,8 @@ const HomeContainer = () => {
           </p>
           <p className='overwiew-content'>
             With the set section, create an armor set in function to talents
-            that you want. Choose your future weapon, and custom the set with
-            armor and charm.
+            that you want. Choose your future weapon from the different types
+            available, and custom the set with armor and charm.
           </p>
         </article>
       </section>
