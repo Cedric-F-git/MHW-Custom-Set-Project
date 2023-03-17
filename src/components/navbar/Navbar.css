@@ -3,10 +3,11 @@
   justify-content: flex-start;
   flex-direction: row;
   width: 100%;
-  background-color: rgb(126, 67, 16);
+  background-color: var(--menu-color);
   padding-left: 30px;
 }
 
 .li-nav {
   margin: 20px;
+  color: var(--color);
 }

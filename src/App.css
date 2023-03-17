@@ -3,17 +3,19 @@
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
-  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
   list-style: none;
 }
 
 :root {
-  --background-color: #414040;
-  --second-color: #5b5451;
-  --color-title: #baaca6;
-  --color: #eddbd3;
+  --menu-color: #3c3226;
+  --background-color: #613416;
+  --second-color: #3c3226;
+  --color-title: #dfe0df;
+  --color: #dfe0df;
 }
 
 body {
   background-color: var(--background-color);
+  background: linear-gradient(200deg, var(--background-color) 32%, #976f42 90%);
 }
