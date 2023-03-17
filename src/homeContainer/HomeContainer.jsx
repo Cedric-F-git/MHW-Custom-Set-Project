@@ -6,8 +6,30 @@ const HomeContainer = () => {
     <div>
       <h1 className='welcome'>Welcome to my fan site !</h1>
 
+      <section className='site-overwiew'>
+        <div className='img-container1'>
+          <img
+            src='http://monsterhunterworld.com/images/top/img_intro02.jpg'
+            alt='Hunter look tree'
+          />
+        </div>
+        <article className='site-overwiew-content'>
+          <h2 className='overwiew-title'>What's happen here ?</h2>
+          <p className='overwiew-content'>
+            In the compendium section, you can look all informations about
+            monsters from Monster Hunter: World. Description, weakness, and
+            more...
+          </p>
+          <p className='overwiew-content'>
+            With the set section, create an armor set in function to talents
+            that you want. Choose your future weapon, and custom the set with
+            armor and charm.
+          </p>
+        </article>
+      </section>
+
       <section className='game-overwiew'>
-        <div className='img-content'>
+        <div className='img-container2'>
           <img
             className='rath-vs-hunt'
             src='http://monsterhunterworld.com/images/top/img_intro01.jpg'
