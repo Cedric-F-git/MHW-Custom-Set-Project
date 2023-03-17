@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  list-style: none;
+}
+
+:root {
+  --background-color: #414040;
+  --second-color: #5b5451;
+  --color-title: #baaca6;
+  --color: #eddbd3;
+}
+
+body {
+  background-color: var(--background-color);
+}
