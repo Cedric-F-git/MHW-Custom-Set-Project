@@ -14,8 +14,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='CustomSet' element={<CustomSet />} />
-        <Route path='Compendium' element={<Compendium />} />
+        <Route path='/custom-set' element={<CustomSet />} />
+        <Route path='/compendium' element={<Compendium />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
       <Footer />
