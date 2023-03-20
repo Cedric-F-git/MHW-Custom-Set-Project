@@ -10,7 +10,11 @@ const ItemContainer = ({ listItem, itemFilter }) => {
           .map((item, index) => (
             <li className='item' key={index}>
               {item.assets ? (
-                <img src={item.assets.icon} alt='' className='weapon-icon' />
+                <img
+                  src={item.assets.icon}
+                  alt="Weapon's icon"
+                  className='weapon-icon'
+                />
               ) : (
                 'No'
               )}

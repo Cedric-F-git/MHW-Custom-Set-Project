@@ -1,15 +1,23 @@
 .item-list {
-  padding: 7px;
+  padding: 7px 50px;
 }
 
 .weapon-icon {
   width: 25px;
   height: 25px;
+  margin: 0 10px 0 2vw;
 }
 
 .item {
-  /* border: red 2px solid; */
-  margin: 5px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  margin: 10px 0;
   height: 40px;
   color: var(--color);
+}
+
+.item:hover {
+  cursor: pointer;
+  background-color: #814a2596;
 }
