@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './ItemList.css';
+import ItemContainer from './itemContainer/ItemContainer';
 
 const ItemList = () => {
   // const url = import.meta.env.VITE_API_URL;
@@ -41,23 +42,13 @@ const ItemList = () => {
         </div>
         <div className='item-filter'>
           <div>
-            <ul>
-              {itemType.map((type, index) => (
-                <button key={index} value={type} onClick={handleClickFilter}>
-                  {type}
-                </button>
-              ))}
-            </ul>
+            {itemType.map((type, index) => (
+              <button key={index} value={type} onClick={handleClickFilter}>
+                {type}
+              </button>
+            ))}
           </div>
-          <div>
-            <ul>
-              {listItem
-                .filter((item) => item.type.includes(itemFilter))
-                .map((item, index) => (
-                  <li key={index}>{item.name}</li>
-                ))}
-            </ul>
-          </div>
+          <ItemContainer listItem={listItem} itemFilter={itemFilter} />
         </div>
       </section>
     </div>
