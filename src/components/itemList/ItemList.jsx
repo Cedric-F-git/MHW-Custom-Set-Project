@@ -30,7 +30,6 @@ const ItemList = () => {
   const handleClickFilter = (item) => {
     setItemFilter(item.target.value);
   };
-
   return (
     <div>
       <section className='item-list-container'>

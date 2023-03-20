@@ -18,7 +18,6 @@ function App() {
         <Route path='/compendium' element={<Compendium />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
-      <CustomSet />
       <Footer />
     </div>
   );

@@ -1,13 +1,22 @@
 import React from 'react';
+import './ItemContainer.css';
 
-const ItemContainer = (listItem, itemFilter) => {
-  console.log('coucou', listItem);
+const ItemContainer = ({ listItem, itemFilter }) => {
   return (
-    <div>
-      {listItem.length >= 0 ? (
+    <div className='item-list'>
+      {listItem.length > 0 ? (
         listItem
           .filter((item) => item.type.includes(itemFilter))
-          .map((item, index) => <li key={index}>{item.name}</li>)
+          .map((item, index) => (
+            <li className='item' key={index}>
+              {item.assets ? (
+                <img src={item.assets.icon} alt='' className='weapon-icon' />
+              ) : (
+                'No'
+              )}
+              {item.name}
+            </li>
+          ))
       ) : (
         <div
           className='

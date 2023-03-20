@@ -1,0 +1,15 @@
+.item-list {
+  padding: 7px;
+}
+
+.weapon-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.item {
+  /* border: red 2px solid; */
+  margin: 5px;
+  height: 40px;
+  color: var(--color);
+}
