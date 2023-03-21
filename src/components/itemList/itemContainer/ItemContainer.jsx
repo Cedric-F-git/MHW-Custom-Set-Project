@@ -1,5 +1,6 @@
 import React from 'react';
 import './ItemContainer.css';
+import notFound from '../../../assets/Icon-Not-Found.png';
 
 const ItemContainer = ({ listItem, itemFilter }) => {
   return (
@@ -19,8 +20,8 @@ const ItemContainer = ({ listItem, itemFilter }) => {
                 />
               ) : (
                 <img
-                  src='../../../assets/Icon-Not-Found.png'
-                  alt=''
+                  src={notFound}
+                  alt="Weapon's icon"
                   className='weapon-icon'
                 />
               )}

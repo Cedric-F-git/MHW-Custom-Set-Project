@@ -9,7 +9,7 @@ const ItemList = () => {
   const [listItem, setListItem] = useState([]);
   const [itemType, setItemType] = useState([]);
   const [itemFilter, setItemFilter] = useState('');
-  const [changeButtonValue, setChangeButtonValue] = useState('');
+  const [changeButtonValue, setChangeButtonValue] = useState('weapons');
 
   useEffect(() => {
     const getApi = () => {
@@ -73,9 +73,9 @@ const ItemList = () => {
         </div>
 
         <div className='item-filter'>
-          {itemType.length !== undefined ? (
+          {itemType.length > 0 ? (
             <div>
-              <select onClick={handleChangeFilter}>
+              <select className='select-custom' onClick={handleChangeFilter}>
                 <option>Choose {changeButtonValue}</option>
                 {itemType.map((type, index) => (
                   <option key={index}>{type}</option>

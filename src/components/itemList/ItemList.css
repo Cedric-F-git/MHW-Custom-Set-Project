@@ -5,6 +5,7 @@
   min-height: 700px;
   background-color: rgba(22, 21, 21, 0.8);
   border-radius: 5px;
+  border: black 2px solid;
 }
 
 .btn-container {
@@ -13,10 +14,24 @@
   flex-wrap: wrap;
 }
 
-button {
-  width: 50%;
+.select-custom {
+  display: flex;
+  width: 80%;
   height: 40px;
   background-color: var(--second-color);
   color: var(--color);
   letter-spacing: 2px;
+  padding: 0 20px;
+  margin: 15px auto;
+  border-radius: 5px;
+}
+
+button {
+  width: 44.5%;
+  height: 40px;
+  background-color: var(--second-color);
+  color: var(--color);
+  letter-spacing: 2px;
+  border-radius: 5px;
+  margin: 10px;
 }
