@@ -1,0 +1,32 @@
+.item-list {
+  padding: 7px 50px;
+}
+
+.weapon-icon {
+  width: 25px;
+  height: 25px;
+  margin: 0 10px 0 2vw;
+  border-radius: 3px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  /* border-bottom: #814a25 2px solid; */
+  border-radius: 5px;
+  margin: 10px 0;
+  height: 40px;
+  color: var(--color);
+}
+
+.item:hover {
+  cursor: pointer;
+  background-color: #814a2596;
+}
+
+.no-results-message {
+  display: flex;
+  justify-content: center;
+  color: var(--color);
+  margin-top: 50px;
+}
