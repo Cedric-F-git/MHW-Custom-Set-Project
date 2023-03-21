@@ -11,7 +11,7 @@ const ItemContainer = ({ listItem, itemFilter }) => {
           )
           .map((item, index) => (
             <li className='item' key={index}>
-              {item.assets ? (
+              {item.assets && item.assets.icon ? (
                 <img
                   src={item.assets.icon}
                   alt="Weapon's icon"
@@ -19,8 +19,8 @@ const ItemContainer = ({ listItem, itemFilter }) => {
                 />
               ) : (
                 <img
-                  src='../assets/Icon-Not-Found.png'
-                  alt='Icon not found'
+                  src='../../../assets/Icon-Not-Found.png'
+                  alt=''
                   className='weapon-icon'
                 />
               )}

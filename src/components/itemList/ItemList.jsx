@@ -4,12 +4,12 @@ import './ItemList.css';
 import ItemContainer from './itemContainer/ItemContainer';
 
 const ItemList = () => {
-  // const url = import.meta.env.VITE_API_URL;
+  let [urlApi, setUrlApi] = useState(`weapons`);
+
   const [listItem, setListItem] = useState([]);
   const [itemType, setItemType] = useState([]);
   const [itemFilter, setItemFilter] = useState('');
-
-  let [urlApi, setUrlApi] = useState(`weapons`);
+  const [changeButtonValue, setChangeButtonValue] = useState('');
 
   useEffect(() => {
     const getApi = () => {
@@ -33,9 +33,10 @@ const ItemList = () => {
 
   const handleChangeUrlApi = (item) => {
     setUrlApi(item.target.value);
+    setChangeButtonValue(item.target.value);
   };
 
-  console.log(urlApi);
+  console.log(itemType);
 
   return (
     <div>
@@ -70,15 +71,18 @@ const ItemList = () => {
             DECORATION
           </button>
         </div>
+
         <div className='item-filter'>
-          <div>
-            <select onClick={handleChangeFilter}>
-              <option>Choose a weapon</option>
-              {itemType.map((type, index) => (
-                <option key={index}>{type}</option>
-              ))}
-            </select>
-          </div>
+          {itemType.length !== undefined ? (
+            <div>
+              <select onClick={handleChangeFilter}>
+                <option>Choose {changeButtonValue}</option>
+                {itemType.map((type, index) => (
+                  <option key={index}>{type}</option>
+                ))}
+              </select>
+            </div>
+          ) : null}
           <ItemContainer listItem={listItem} itemFilter={itemFilter} />
         </div>
       </section>
