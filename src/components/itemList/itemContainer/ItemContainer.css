@@ -11,6 +11,7 @@
 .item {
   display: flex;
   align-items: center;
+  /* border-bottom: #814a25 2px solid; */
   border-radius: 5px;
   margin: 10px 0;
   height: 40px;
@@ -20,4 +21,11 @@
 .item:hover {
   cursor: pointer;
   background-color: #814a2596;
+}
+
+.no-results-message {
+  display: flex;
+  justify-content: center;
+  color: var(--color);
+  margin-top: 50px;
 }

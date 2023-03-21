@@ -9,12 +9,12 @@ const ItemList = () => {
   const [itemType, setItemType] = useState([]);
   const [itemFilter, setItemFilter] = useState('');
 
-  // const [urlApi, setUrlApi] = useState(`${url}/weapons`);
+  let [urlApi, setUrlApi] = useState(`weapons`);
 
   useEffect(() => {
     const getApi = () => {
       axios
-        .get(`https://mhw-db.com/weapons/`)
+        .get(`https://mhw-db.com/${urlApi}`)
         .then((res) => {
           setListItem(res.data);
           setItemType([...new Set(res.data.map((item) => item.type))]);
@@ -25,27 +25,59 @@ const ItemList = () => {
     };
 
     getApi();
-  }, []);
+  }, [urlApi]);
 
-  const handleClickFilter = (item) => {
+  const handleChangeFilter = (item) => {
     setItemFilter(item.target.value);
   };
+
+  const handleChangeUrlApi = (item) => {
+    setUrlApi(item.target.value);
+  };
+
+  console.log(urlApi);
+
   return (
     <div>
       <section className='item-list-container'>
         <div className='btn-container'>
-          <button className='btn-wpn'>WEAPON</button>
-          <button className='btn-armor'>ARMOR</button>
-          <button className='btn-charm'>CHARM</button>
-          <button className='btn-decor'>DECORATION</button>
+          <button
+            className='btn-wpn'
+            value='weapons'
+            onClick={handleChangeUrlApi}
+          >
+            WEAPON
+          </button>
+          <button
+            className='btn-armor'
+            value='armor'
+            onClick={handleChangeUrlApi}
+          >
+            ARMOR
+          </button>
+          <button
+            className='btn-charm'
+            value='charms'
+            onClick={handleChangeUrlApi}
+          >
+            CHARM
+          </button>
+          <button
+            className='btn-decor'
+            value='decorations'
+            onClick={handleChangeUrlApi}
+          >
+            DECORATION
+          </button>
         </div>
         <div className='item-filter'>
           <div>
-            {itemType.map((type, index) => (
-              <button key={index} value={type} onClick={handleClickFilter}>
-                {type}
-              </button>
-            ))}
+            <select onClick={handleChangeFilter}>
+              <option>Choose a weapon</option>
+              {itemType.map((type, index) => (
+                <option key={index}>{type}</option>
+              ))}
+            </select>
           </div>
           <ItemContainer listItem={listItem} itemFilter={itemFilter} />
         </div>

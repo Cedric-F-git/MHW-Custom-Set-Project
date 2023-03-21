@@ -6,7 +6,9 @@ const ItemContainer = ({ listItem, itemFilter }) => {
     <div className='item-list'>
       {listItem.length > 0 ? (
         listItem
-          .filter((item) => item.type.includes(itemFilter))
+          .filter((item) =>
+            itemFilter ? item.type && item.type.includes(itemFilter) : true
+          )
           .map((item, index) => (
             <li className='item' key={index}>
               {item.assets ? (
@@ -16,9 +18,14 @@ const ItemContainer = ({ listItem, itemFilter }) => {
                   className='weapon-icon'
                 />
               ) : (
-                'No'
+                <img
+                  src='../assets/Icon-Not-Found.png'
+                  alt='Icon not found'
+                  className='weapon-icon'
+                />
               )}
               {item.name}
+              {item.id}
             </li>
           ))
       ) : (
@@ -26,7 +33,7 @@ const ItemContainer = ({ listItem, itemFilter }) => {
           className='
         no-results-message'
         >
-          No item choice
+          Item not selected
         </div>
       )}
     </div>
